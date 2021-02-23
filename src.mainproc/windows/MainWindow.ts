@@ -27,8 +27,8 @@ export function createMainWindow() {
             contextIsolation: true,
             preload: path.join(app.getAppPath(), 'src.preload/preload-isolated.js'),
         },
-        width: 800,
-        height: 600,
+        width: 1400,
+        height: 900,
     });
     registerWindow(mainWindowSymbol, mainWindow);
 
