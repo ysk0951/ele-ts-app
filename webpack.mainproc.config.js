@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-
-
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = function (env) {
     return [{
@@ -73,7 +72,15 @@ module.exports = function (env) {
                 ],
             },],
         },
-        plugins: [],
+        plugins: [
+        ],
+        devServer: {
+            contentBase: __dirname + "/dist/",
+            inline: true,
+            hot: true,
+            host: "localhost",
+            port: 8080
+        },
         resolve: {
             extensions: ['.tsx', '.ts', '.jsx', '.js']
         },

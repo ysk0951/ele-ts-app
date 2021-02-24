@@ -1,7 +1,10 @@
 <template>
    <v-app>
     <v-content>
-        <v-btn elevation="6">123</v-btn>
+        <v-btn elevation="3">FileBackUP_SVN</v-btn>
+        <v-btn elevation="3">MENU2</v-btn>
+        <v-btn elevation="3">MENU3</v-btn>
+        <v-btn elevation="3">MENU4</v-btn>
     </v-content>
   </v-app>
 </template>
