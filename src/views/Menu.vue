@@ -1,9 +1,9 @@
 <template>
-    <v-app>
-        <v-content>
-            <v-container>Hello world</v-container>
-        </v-content>
-    </v-app>
+   <v-app>
+    <v-content>
+        <v-btn elevation="6">123</v-btn>
+    </v-content>
+  </v-app>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
@@ -15,6 +15,7 @@ import { Component, Vue } from 'vue-property-decorator';
 // })
 export default class Menu extends Vue {
     public mounted() {
+        console.log(this);
         // this is component lifecycle event
     }
 }

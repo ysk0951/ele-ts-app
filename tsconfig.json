@@ -20,7 +20,10 @@
     // "noUnusedParameters": true,
     // "noUnusedLocals": true,
     // "noFallthroughCasesInSwitch": true,
-
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/vuetify/types"
+    ],
     "baseUrl": ".",
     "types": [
       "webpack-env",
