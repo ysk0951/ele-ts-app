@@ -10,9 +10,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-
+    "noUnusedLocals": false,
     "noEmitOnError": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -25,7 +25,8 @@
     "types": [
       "webpack-env",
       "mocha",
-      "chai"
+      "chai",
+      "vuetify"
     ],
     "paths": {
       "@/*": [

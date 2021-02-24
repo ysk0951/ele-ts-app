@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '../../views/Home.vue';
+import Menu from '../../views/Menu.vue';
 
 Vue.use(Router);
 
@@ -8,6 +9,7 @@ const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
+        //default
         {
             path: '/',
             name: 'home',
@@ -25,6 +27,13 @@ const router = new Router({
             // which is lazy-loaded when the route is visited.
             component: () => import(/* webpackChunkName: "about" */ '../../views/About.vue'),
         },
+        {
+            path : '/menu',
+            name : 'menu',
+            component : Menu,
+        }
+        //New
+        
     ],
 });
 

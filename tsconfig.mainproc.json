@@ -14,7 +14,7 @@
         "sourceMap": true,
 
         "noEmitOnError": true,
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "suppressImplicitAnyIndexErrors": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
@@ -24,7 +24,7 @@
         // "noFallthroughCasesInSwitch": true,
 
         "baseUrl": ".",
-        "types": ["node", "electron"],
+        "types": ["node", "electron","vuetify"],
         "paths": {
         },
         "lib": [
