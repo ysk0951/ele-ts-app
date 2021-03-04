@@ -12,7 +12,9 @@ Vue.use(VueMoment)
 Vue.set(Vue.prototype, '_', _);
 Vue.set(Vue.prototype, '$', jquery);
 
-//https://wedul.site/632 reference
+//reference
+//https://wedul.site/632 
+//https://iancoding.tistory.com/155?category=1179222
 
 globalThis.app = new Vue({
     vuetify : new Vuetify(),
