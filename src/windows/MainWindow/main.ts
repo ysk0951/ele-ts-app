@@ -4,13 +4,13 @@ import router from './router';
 import Vuetify from 'vuetify';
 import _ from 'lodash';
 import jquery from 'jquery'
-import moment from 'moment'
+import VueMoment from 'vue-moment'
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
+Vue.use(VueMoment)
 Vue.set(Vue.prototype, '_', _);
 Vue.set(Vue.prototype, '$', jquery);
-Vue.set(Vue.prototype, 'moment',moment);
 
 new Vue({
     vuetify : new Vuetify(),
