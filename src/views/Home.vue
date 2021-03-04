@@ -20,6 +20,7 @@ declare var myAppApi: { ping: (value: string) => Promise<string> };
 })
 export default class Home extends Vue {
     public mounted() {
+        
         // this is component lifecycle event
     }
 
