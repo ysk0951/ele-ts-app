@@ -12,7 +12,6 @@ module.exports = function (env) {
         },
         output: {
             library: 'main',
-
             libraryTarget: 'commonjs2',
             filename: 'main.js',
             path: path.resolve(__dirname, 'bin'),
@@ -79,7 +78,8 @@ module.exports = function (env) {
             inline: true,
             hot: true,
             host: "localhost",
-            port: 8080
+            port: 8080,
+            publicPath: "/dist/main-window.html",
         },
         resolve: {
             extensions: ['.tsx', '.ts', '.jsx', '.js']
