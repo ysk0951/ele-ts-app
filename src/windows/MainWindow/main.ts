@@ -12,8 +12,11 @@ Vue.use(VueMoment)
 Vue.set(Vue.prototype, '_', _);
 Vue.set(Vue.prototype, '$', jquery);
 
-new Vue({
+globalThis.app = new Vue({
     vuetify : new Vuetify(),
     router,
     render: (h) => h(App),
 }).$mount('#app');
+
+
+  
