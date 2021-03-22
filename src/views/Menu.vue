@@ -9,16 +9,15 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-// import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-// @Component({
-//     components: {
-//         HelloWorld,
-//     },
-// })
 export default class Menu extends Vue {
+    public data(){
+        return {
+            selectedMenu : undefined,
+
+        }
+    }
     public mounted() {
         console.log(this);
-        // this is component lifecycle event
     }
 }
 </script>

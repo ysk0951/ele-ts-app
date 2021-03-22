@@ -1,22 +1,18 @@
-
 import * as path from 'path';
-import { app, BrowserWindow, shell } from 'electron';
+import { app, BrowserWindow, session, shell } from 'electron';
 import { registerWindow, unregisterWindow, isRegistered, getWindow } from '../lib/SimpleWindowManager';
-
-
+import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
 
 const mainWindowSymbol = Symbol();
-
-
-// Keep a global reference of the window object, if you don't, the window will
+app.on('ready',function(){
+    BrowserWindow.addDevToolsExtension('node_modules/vue-devtools');
+})
 // be closed automatically when the JavaScript object is garbage collected.
-
 export function createMainWindow() {
     // MainWindow is singleton.
     if (isRegistered(mainWindowSymbol)) {
         return getWindow(mainWindowSymbol);
     }
-
     // Create the browser window.
     let mainWindow: BrowserWindow | null = new BrowserWindow({
         webPreferences: {
@@ -30,10 +26,9 @@ export function createMainWindow() {
         width: 1400,
         height: 900,
     });
+  
     registerWindow(mainWindowSymbol, mainWindow);
-
-    // and load the html of the app.
-    mainWindow.loadFile(path.join(app.getAppPath(), 'dist/main-window.html'));
+    mainWindow.webContents.openDevTools();
 
     // CSP is not work while the location scheme is 'file'.
     // And when if navigated to http/https, CSP is to be enabled.
@@ -84,10 +79,6 @@ export function createMainWindow() {
         // }
         return callback(false);
     });
-
-    // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
-
     // Emitted when the window is closed.
     mainWindow.on('closed', () => {
         // Dereference the window object, usually you would store windows
@@ -99,10 +90,10 @@ export function createMainWindow() {
 
     mainWindow.webContents.on('new-window', (event: any, url: string) => {
         event.preventDefault();
+        //vue-dev-Tools
         if (url.match(/^https?:\/\//)) {
             shell.openExternal(url);
         }
     });
-
     return mainWindow;
 }
