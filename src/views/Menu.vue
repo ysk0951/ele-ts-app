@@ -2,9 +2,8 @@
    <v-app>
     <v-content>
         <v-btn elevation="3">FileBackUP_SVN</v-btn>
-        <v-btn elevation="3">MENU2</v-btn>
-        <v-btn elevation="3">MENU3</v-btn>
-        <v-btn elevation="3">MENU4</v-btn>
+        <v-btn elevation="3">KAFKA Produce</v-btn>
+        <v-btn elevation="3">KAFKA Consume</v-btn>
     </v-content>
   </v-app>
 </template>
