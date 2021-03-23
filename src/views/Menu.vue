@@ -10,8 +10,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import * as kafka from 'kafka-node';
-// import { EventEmitter } from 'events';
-// EventEmitter.defaultMaxListeners = 0;
+import { EventEmitter } from 'events';
+EventEmitter.defaultMaxListeners = 0;
 export default class Menu extends Vue {
   public data(){
         return {
@@ -35,7 +35,8 @@ export default class Menu extends Vue {
         return this.randomNum
     }
     public init():void{
-        this.randomNum
+        console.log("Hello Kafak");
+        console.log(this.randomNum,kafka);
     }
     public makeWASIP() : string {
         return (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
