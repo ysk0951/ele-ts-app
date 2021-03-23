@@ -2,8 +2,8 @@
    <v-app>
     <v-content>
         <v-btn elevation="3">FileBackUP_SVN</v-btn>
-        <v-btn elevation="3">KAFKA Produce</v-btn>
-        <v-btn elevation="3">KAFKA Consume</v-btn>
+        <v-btn elevation="3" @click="produce">KAFKA Produce</v-btn>
+        <v-btn elevation="3" @click="comsume">KAFKA Consume</v-btn>
     </v-content>
   </v-app>
 </template>
@@ -13,7 +13,7 @@ import * as kafka from 'kafka-node';
 import { EventEmitter } from 'events';
 EventEmitter.defaultMaxListeners = 0;
 export default class Menu extends Vue {
-  public data(){
+    public data(){
         return {
             selectedMenu : "",
             randomNum : {
@@ -29,7 +29,10 @@ export default class Menu extends Vue {
         }
     }
     public mounted() {
-        this.init();
+        this.init;
+    }
+    public consume(){
+        this.init
     }
     get randomNum() : object {
         return this.randomNum
